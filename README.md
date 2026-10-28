@@ -50,7 +50,7 @@ At 420 W, stock testing reached 72 C / 419.42 W, and unlocked testing reached 74
 - [Unlocked thermal summary](results/unlocked-420-telemetry-summary.json) and [stock thermal summary](results/stock-420-telemetry-summary.json)
 - [Unlocked environment](results/unlocked-420-environment.json), [stock environment](results/stock-420-environment.json), and [evidence digests](results/unlocked-420-evidence-hashes.json)
 
-The 420 W unlocked firmware test has finished. **Final chassis-off stock restoration is still pending**; do not interpret the completed benchmarks as confirmation of hardware rollback.
+**The 420 W test and full chassis-off stock restoration are complete.** Both experimental packages were purged, the original kernel and recovery image passed verification, and both inference engines passed live completions. See the [final 420 W restoration record](results/stock-restoration-420w-20261028.md).
 
 ## Research question
 

@@ -69,3 +69,8 @@ Positive values mean the second condition is faster. The model-weighted geometri
 - Three samples cannot establish reliable confidence intervals for small differences, especially pp512.
 - The run order was unlocked 300 W, stock 300 W, stock 420 W, unlocked 420 W. Environmental drift and benchmark order are confounders.
 - See stock-420.jsonl and unlocked-420.jsonl and the previous 300 W files for all individual timing samples. Thermal summaries distinguish sampled power draw from configured caps.
+
+
+## Post-test restoration
+
+The test system was returned to stock with a supervised full chassis shutdown and BMC power-on. The RTX 3090 unlock selector and loaded module were absent on the new stock boot. Both experimental GPU Unlock packages were purged, recovery image checks passed, and both production model services passed live completion tests. The [restoration verification record](stock-restoration-420w-20261028.md) documents the completed cleanup.
