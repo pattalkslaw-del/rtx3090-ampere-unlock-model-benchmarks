@@ -2,6 +2,8 @@
 
 Community benchmark project comparing **the same GeForce RTX 3090 before and after applying [Zagitta/gpu-unlock](https://github.com/Zagitta/gpu-unlock)**, with matched model weights, power limits, CUDA backend, and inference settings.
 
+**[Read the full experiment report](docs/full-experiment-report-20261028.md):** a plain-language explanation of the method and all four configurations, 15-model throughput table, dense GEMM data, Maya cross-check, thermal readings, limitations and reproduction details.
+
 **Results, October 28, 2026:** The stock and unlocked suites both completed **15 of 15 models**, with **45 matched test cases** (512-token prefill, 2048-token prefill, and 128-token generation) and three timing samples per case. Same RTX 3090, model SHA-256 hashes, CUDA benchmark binary and 300 W power limit.
 
 **The unlock's approximately 62% FP16/BF16 GEMM advantage did not produce a comparable benefit in quantized GGUF inference.** The geometric mean unlocked/stock throughput change across 15 models was:

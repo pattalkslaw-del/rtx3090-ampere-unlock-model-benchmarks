@@ -9,7 +9,7 @@
     "model_parameters": 1235814432,
     "model_size_bytes": 1321083008,
     "sha256": "432f310a77f4650a88d0fd59ecdd7cebed8d684bafea53cbff0473542964f0c3",
-    "status": "unlocked_measured_stock_pending"
+    "status": "all_four_conditions_measured"
   },
   {
     "id": "llama3.2-3b-q4",
@@ -21,7 +21,7 @@
     "model_parameters": 3212749888,
     "model_size_bytes": 2019377696,
     "sha256": "6c1a2b41161032677be168d354123594c0e6e67d2b9227c84f296ad037c728ff",
-    "status": "unlocked_measured_stock_pending"
+    "status": "all_four_conditions_measured"
   },
   {
     "id": "phi3-mini-q4",
@@ -33,7 +33,7 @@
     "model_parameters": 3821079552,
     "model_size_bytes": 2393231360,
     "sha256": "28a89b4ddb5766355f24e362ae4078b4c35b9ca9568df5fc9e6d9aeee4dee834",
-    "status": "unlocked_measured_stock_pending"
+    "status": "all_four_conditions_measured"
   },
   {
     "id": "gemma3-4b-q4",
@@ -45,7 +45,7 @@
     "model_parameters": 3880099328,
     "model_size_bytes": 2489758112,
     "sha256": "4996030242583a40aa151ff93f49ed787ac8c25e4120c3ae4588b2e2a7d1ae94",
-    "status": "unlocked_measured_stock_pending"
+    "status": "all_four_conditions_measured"
   },
   {
     "id": "qwen3-4b-q4",
@@ -57,7 +57,7 @@
     "model_parameters": 4022468096,
     "model_size_bytes": 2497280960,
     "sha256": "fbe1d5edd4ce802ae3ae7c7e4ab7d09789d697fdac1fc7929f8df4ca3c41bae3",
-    "status": "unlocked_measured_stock_pending"
+    "status": "all_four_conditions_measured"
   },
   {
     "id": "mistral-7b-q4",
@@ -69,7 +69,7 @@
     "model_parameters": 7248023552,
     "model_size_bytes": 4372812000,
     "sha256": "1270d22c0fbb3d092fb725d4d96c457b7b687a5f5a715abe1e818da303e562b6",
-    "status": "unlocked_measured_stock_pending"
+    "status": "all_four_conditions_measured"
   },
   {
     "id": "qwen3-8b-q4",
@@ -81,7 +81,7 @@
     "model_parameters": 8190735360,
     "model_size_bytes": 5027784224,
     "sha256": "54fffa050078e984116639c83dfb64b5aa6d4cd474e018b076777c632bbccccd",
-    "status": "unlocked_measured_stock_pending"
+    "status": "all_four_conditions_measured"
   },
   {
     "id": "ornith1-9b-q8",
@@ -93,7 +93,7 @@
     "model_parameters": 8953803264,
     "model_size_bytes": 9527500992,
     "sha256": "e877c47b2e0b52779a1aeb8306dec8c8a971b2b94cccef44c73eff6d557941a4",
-    "status": "unlocked_measured_stock_pending"
+    "status": "all_four_conditions_measured"
   },
   {
     "id": "qwen3-14b-q4",
@@ -105,7 +105,7 @@
     "model_parameters": 14768307200,
     "model_size_bytes": 9001753632,
     "sha256": "915913e22399475dbe6c968ac014d9f1fbe08975e489279aede9d5c7b2c98eb6",
-    "status": "unlocked_measured_stock_pending"
+    "status": "all_four_conditions_measured"
   },
   {
     "id": "qwen3.6-27b-q4",
@@ -117,7 +117,7 @@
     "model_parameters": 26895998464,
     "model_size_bytes": 17612564704,
     "sha256": "ff6941ded525b34eb159496762c29dd0ec6e71dc31b74d57e75d871a03eec259",
-    "status": "unlocked_measured_stock_pending"
+    "status": "all_four_conditions_measured"
   },
   {
     "id": "qwen3.8-27b-iq3",
@@ -129,7 +129,7 @@
     "model_parameters": 26895998464,
     "model_size_bytes": 11771546784,
     "sha256": "64b53b64c7aa39f20a7e54bd80582fe595b1d745624ee8a72e92508c0326d810",
-    "status": "unlocked_measured_stock_pending"
+    "status": "all_four_conditions_measured"
   },
   {
     "id": "qwen3.8-27b-q4",
@@ -141,7 +141,7 @@
     "model_parameters": 27320697856,
     "model_size_bytes": 17923394624,
     "sha256": "bee238bbeb3dc0a34bde4d0dedbaee1f98c009e8bb4226f03070054c12fb1372",
-    "status": "unlocked_measured_stock_pending"
+    "status": "all_four_conditions_measured"
   },
   {
     "id": "qwen3.6-35b-a3b-q4",
@@ -153,7 +153,7 @@
     "model_parameters": 34660610688,
     "model_size_bytes": 22134528992,
     "sha256": "a0a64b7ae3a8afa1117fa0ad22d5cf8c4f8b8dab4525f9ede4768c4ddd978a93",
-    "status": "unlocked_measured_stock_pending"
+    "status": "all_four_conditions_measured"
   },
   {
     "id": "ornith1-35b-q4",
@@ -165,7 +165,7 @@
     "model_parameters": 34660610688,
     "model_size_bytes": 21166757760,
     "sha256": "ff25291b2599fb927a835e624d2b3540106af61761c3fa57ac4264046dbec002",
-    "status": "unlocked_measured_stock_pending"
+    "status": "all_four_conditions_measured"
   },
   {
     "id": "ornith1.5-35b-q4",
@@ -177,6 +177,6 @@
     "model_parameters": 35505251456,
     "model_size_bytes": 21864081056,
     "sha256": "12d8d5c01bae7f23ea4822b2f96ba069d531f827d02a57c31002f2f95e72614a",
-    "status": "unlocked_measured_stock_pending"
+    "status": "all_four_conditions_measured"
   }
 ]
