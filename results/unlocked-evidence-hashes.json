@@ -1,8 +1,9 @@
 {
   "unlocked.jsonl": {
-    "sha256": "95ec92cd97d4f2655aceb1f7ac4d5e21ad7602fe121e200b6cf59a899ca21395",
-    "bytes": 27503,
-    "public": true
+    "sha256": "4dc884048c4a9e5821498b48eb837aa3fad9e96f19e33b52f1f4d7db169bcd77",
+    "bytes": 27715,
+    "public": true,
+    "description": "Public sanitized version; original pre-sanitization private copy remains available for provenance checks"
   },
   "unlocked-environment.json": {
     "sha256": "3a208127a8be343bd00fe69d073c9167427f55c9a6c3fa8bc4a61ec4dda869bb",
