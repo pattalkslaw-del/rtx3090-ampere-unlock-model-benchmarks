@@ -2,16 +2,29 @@
 
 Community benchmark project comparing **the same GeForce RTX 3090 before and after applying [Zagitta/gpu-unlock](https://github.com/Zagitta/gpu-unlock)**, with matched model weights, power limits, CUDA backend, and inference settings.
 
-**Status (October 28, 2026):** The unlocked-only CUDA GGUF suite completed **15 of 15 models** with no model-load failures. The stock cold-boot control measurements are **not yet performed**, so this is not a completed speedup comparison. All unlocked measurements, hashes, methodology and aggregate thermal telemetry are available below.
+**Results, October 28, 2026:** The stock and unlocked suites both completed **15 of 15 models**, with **45 matched test cases** (512-token prefill, 2048-token prefill, and 128-token generation) and three timing samples per case. Same RTX 3090, model SHA-256 hashes, CUDA benchmark binary and 300 W power limit.
 
-- [Unlocked throughput table](results/unlocked-summary.md)
-- [Unlocked raw per-model samples and model digests](results/unlocked.jsonl)
-- [Full model/quantization manifest](results/models.json)
-- [Unlocked environment and binary hash](results/unlocked-environment.json)
-- [Thermal summary](results/unlocked-telemetry-summary.json)
-- [Evidence file SHA256 hashes](results/unlocked-evidence-hashes.json)
+**The unlock's approximately 62% FP16/BF16 GEMM advantage did not produce a comparable benefit in quantized GGUF inference.** The geometric mean unlocked/stock throughput change across 15 models was:
 
-**Do not interpret a model's unlocked tokens/sec as its gain from GPU Unlock until matched stock numbers are available.**
+| Workload | Mean unlocked gain |
+|---|---:|
+| 512-token prefill | **−1.22%** |
+| 2048-token prefill | **+0.21%** |
+| 128-token generation | **−0.28%** |
+
+This is a controlled single-card inference result, not a claim about FP16 training, unquantized inference, other engines or architectures. Thirteen of 45 paired cases had more than 5% within-phase timing variation; the 512-token aggregate is especially sensitive to noisy short runs.
+
+**Read the measurements:**
+
+- [Analysis and complete model-by-model speedup table](results/analysis.md)
+- [45-case paired comparison, Markdown](results/comparison.md) and [CSV](results/comparison.csv)
+- [Stock throughput table](results/stock-summary.md) and [unlocked throughput table](results/unlocked-summary.md)
+- [Stock raw results](results/stock.jsonl) and [unlocked raw results](results/unlocked.jsonl)
+- [15 model SHA-256 hashes, filenames, quantizations and source references](results/models.json)
+- [Stock environment](results/stock-environment.json), [unlocked environment](results/unlocked-environment.json), and [paired aggregate statistics](results/paired-aggregates.json)
+- [Stock GPU telemetry](results/stock-telemetry-summary.json), [unlocked GPU telemetry](results/unlocked-telemetry-summary.json), and [evidence digests](results/stock-evidence-hashes.json)
+
+Model weights and proprietary GPU firmware are deliberately excluded.
 
 ## Research question
 
@@ -24,10 +37,10 @@ An earlier hybrid two-NVIDIA-GPU Maya experiment showed approximately +62% susta
 - GPU: RTX 3090 24 GiB, 300 W cap, exclusively selected with CUDA_VISIBLE_DEVICES=0.
 - Inference engine: identical dedicated llama.cpp CUDA backend for both configurations. Source commit, compiler, binary SHA256, and tested flags recorded.
 - Tests: 512 and 2048 prompt tokens and 128 generated tokens, each with three repetitions after warmup; mean and standard deviation in tokens/second.
-- Models: 10–15 GGUF files from approximately 1B through 35B, including Qwen3.6-35B-A3B, Qwen3.8-27B, and Phi-3 Mini. Exact weight SHA256 hashes in model manifest.
+- Models: 15 GGUF files from approximately 1B through 35B, including Qwen3.6-35B-A3B, Qwen3.8-27B, and Phi-3 Mini. Exact weight SHA256 hashes in model manifest.
 - Isolation: production NVIDIA inference paused during benchmarks; Intel inference remains on separate GPUs.
 - Safety: immediate hardware temperature/power-brake/GPU-fault stops and a sustained-software-throttle detector.
-- Phases: unlocked first (currently active), then a **verified full chassis-off** into the preserved stock kernel, followed by stock. Same corpus and settings.
+- Phases completed: unlocked first, followed by a verified **full chassis-off** and the preserved stock kernel. Same model corpus, CUDA binary and benchmark settings.
 
 ## Reproduction
 

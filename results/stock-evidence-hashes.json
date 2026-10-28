@@ -1,0 +1,27 @@
+{
+  "stock.jsonl": {
+    "sha256": "94b85fa25993482b659dabc1b94b18b3c869fdc25063e6201be7797fe93d4783",
+    "bytes": 27661,
+    "public": true
+  },
+  "stock-environment.json": {
+    "sha256": "7fb9dc0e76230bc876a9fbc2759e1d9786f5a60eff0a5755ea5b57b6fc55f338",
+    "bytes": 630,
+    "public": true
+  },
+  "stock-original.jsonl": {
+    "sha256": "ecf3346a314a8f8f570cde869fac472c2fa42e4725f018c42c46b8b421e7a7a7",
+    "bytes": 27449,
+    "public": false
+  },
+  "stock-telemetry.jsonl": {
+    "sha256": "3ff9d73826e5037062e3b501cecf3f018cfd4711af59c52f23879d606bb41958",
+    "bytes": 1062150,
+    "public": false
+  },
+  "stock-supervisor-progress.jsonl": {
+    "sha256": "870eba59b89e5b450ba7a39e0f447fa6a0b5a9a71aef901de3459323cca6a8a5",
+    "bytes": 963,
+    "public": false
+  }
+}

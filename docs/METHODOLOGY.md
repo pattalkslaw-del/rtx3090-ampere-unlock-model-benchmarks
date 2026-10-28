@@ -24,3 +24,9 @@ Monitor temperature, board power, clock limiting reasons, GPU/PCIe errors, and h
 ## Publication
 
 Do not conflate FP16 GEMM throughput with model inference tokens/s. Do not compare different quant files or GPU-offload patterns as matched. Publish failure outcomes; do not silently drop failed models. Do not upload model weights or firmware blobs.
+
+## Completed paired dataset, October 28, 2026
+
+Both 15-model phases passed all 45 synthetic throughput test cases. Models were tested in the same order; the unlocked phase preceded a genuine chassis-off power cycle and stock boot, after which the same dedicated CUDA benchmark was run. The stock boot had no GPU Unlock kernel selector or loaded module. All published model and binary hashes match between phases.
+
+The dataset is a paired single-run comparison, not an alternating ABBA study. Some short-context cases had coefficients of variation above 5% and should not be treated as reproducible gains or losses without additional repetitions. Aggregated results are model-weighted geometric means of unlocked/stock throughput ratios. See results/analysis.md for all values and caveats.

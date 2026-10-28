@@ -42,7 +42,7 @@ def main():
     keys=['model','test','status','stock_tokens_s','unlocked_tokens_s',
           'gain_pct','cv_stock_pct','cv_unlocked_pct','sha256','quantization']
     with (out/'comparison.csv').open('w',newline='') as f:
-        writer=csv.DictWriter(f,fieldnames=keys);writer.writeheader();writer.writerows(rows)
+        writer=csv.DictWriter(f,fieldnames=keys,lineterminator='\n');writer.writeheader();writer.writerows(rows)
     header='| Model | Test | Stock tok/s | Unlocked tok/s | Gain | Status |\n|---|---|---:|---:|---:|---|\n'
     lines=[header]
     for row in rows:

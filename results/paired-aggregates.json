@@ -1,0 +1,96 @@
+{
+  "metrics": {
+    "pp512": {
+      "geomean_gain_pct": -1.219879857346018,
+      "median_gain_pct": -0.5184410719502375,
+      "min_gain_pct": -7.832884504111048,
+      "max_gain_pct": 2.3694987002427004,
+      "model_count": 15
+    },
+    "pp2048": {
+      "geomean_gain_pct": 0.21475008586475663,
+      "median_gain_pct": 0.2955848173994191,
+      "min_gain_pct": -0.7339361150430324,
+      "max_gain_pct": 1.1316106730198339,
+      "model_count": 15
+    },
+    "tg128": {
+      "geomean_gain_pct": -0.2773214733571172,
+      "median_gain_pct": -0.12219768226352512,
+      "min_gain_pct": -0.9393245800396799,
+      "max_gain_pct": 0.1265125216952212,
+      "model_count": 15
+    }
+  },
+  "n_models": 15,
+  "repeats": 3,
+  "power_limit_W": 300,
+  "identical_model_and_binary_hashes": true,
+  "high_variability_cases_cv_above_5_pct": [
+    [
+      "llama3.2-1b-q8",
+      "pp512",
+      18.01
+    ],
+    [
+      "llama3.2-3b-q4",
+      "pp512",
+      24.2
+    ],
+    [
+      "phi3-mini-q4",
+      "pp512",
+      6.33
+    ],
+    [
+      "gemma3-4b-q4",
+      "pp512",
+      9.0
+    ],
+    [
+      "qwen3-4b-q4",
+      "pp512",
+      9.46
+    ],
+    [
+      "qwen3-8b-q4",
+      "pp512",
+      5.31
+    ],
+    [
+      "ornith1-9b-q8",
+      "pp512",
+      6.24
+    ],
+    [
+      "qwen3-14b-q4",
+      "pp512",
+      13.04
+    ],
+    [
+      "qwen3.8-27b-iq3",
+      "pp512",
+      7.36
+    ],
+    [
+      "qwen3.8-27b-q4",
+      "pp512",
+      7.05
+    ],
+    [
+      "qwen3.6-35b-a3b-q4",
+      "pp512",
+      8.94
+    ],
+    [
+      "ornith1-35b-q4",
+      "pp512",
+      14.01
+    ],
+    [
+      "ornith1.5-35b-q4",
+      "pp512",
+      8.29
+    ]
+  ]
+}
