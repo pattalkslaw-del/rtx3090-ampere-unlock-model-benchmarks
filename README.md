@@ -2,7 +2,16 @@
 
 Community benchmark project comparing **the same GeForce RTX 3090 before and after applying [Zagitta/gpu-unlock](https://github.com/Zagitta/gpu-unlock)**, with matched model weights, power limits, CUDA backend, and inference settings.
 
-**Status:** GPU unlock initialization and GEMM speedup have been independently observed. The 10–15-model CUDA GGUF suite and the cold-boot stock comparison are being collected. Results will be added as verified—unmeasured models are **not** represented as tested.
+**Status (October 28, 2026):** The unlocked-only CUDA GGUF suite completed **15 of 15 models** with no model-load failures. The stock cold-boot control measurements are **not yet performed**, so this is not a completed speedup comparison. All unlocked measurements, hashes, methodology and aggregate thermal telemetry are available below.
+
+- [Unlocked throughput table](results/unlocked-summary.md)
+- [Unlocked raw per-model samples and model digests](results/unlocked.jsonl)
+- [Full model/quantization manifest](results/models.json)
+- [Unlocked environment and binary hash](results/unlocked-environment.json)
+- [Thermal summary](results/unlocked-telemetry-summary.json)
+- [Evidence file SHA256 hashes](results/unlocked-evidence-hashes.json)
+
+**Do not interpret a model's unlocked tokens/sec as its gain from GPU Unlock until matched stock numbers are available.**
 
 ## Research question
 
