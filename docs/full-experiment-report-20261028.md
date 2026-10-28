@@ -155,7 +155,7 @@ The llama.cpp suite used only the RTX 3090. We also ran a separate matched produ
 | 32K end-to-end completion | 81.202 s | 81.112 s | 0.11% faster |
 | 32K decode speed | 19.3 tok/s | 18.5 tok/s | 4.15% slower |
 
-Maya's offload, CPU work, second GPU and PCIe traffic create different constraints from the single-card GGUF test. We did not isolate those components individually. Still, this independent end-to-end experiment also failed to show a practical improvement from the unlock for the tested configuration.
+Maya's offload, CPU work, second GPU and PCIe traffic create different constraints from the single-card GGUF test. We did not isolate those components individually. Still, this independent end-to-end experiment also failed to show a practical improvement from the unlock for the tested configuration. We used one warmup and three measured requests per prompt length; those internal request-level logs have not been published, so the Maya section is supporting evidence rather than part of the fully public, reproducible 15-model dataset.
 
 The predefined Maya retention gate required at least a 10% time-to-first-token or end-to-end improvement at both prompt lengths, without an unacceptable decode regression. It failed that gate.
 
@@ -200,7 +200,7 @@ The next engineering-grade study should randomize or alternate stock/unlocked co
 
 ## 11. Data and reproduction
 
-Everything needed to audit the measured results is in the public repository. We published:
+The four-way GGUF measurements, matching checks and model manifest are available for public audit. The separate Maya request-level logs remain private. We published:
 
 - [The complete four-way matrix](../results/power-matrix.md) and [CSV](../results/power-matrix.csv), covering every model and test case.
 - [Raw stock 300 W](../results/stock.jsonl), [unlocked 300 W](../results/unlocked.jsonl), [stock 420 W](../results/stock-420.jsonl), and [unlocked 420 W](../results/unlocked-420.jsonl) timing records.
