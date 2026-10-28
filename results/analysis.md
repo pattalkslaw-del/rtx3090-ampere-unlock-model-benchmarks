@@ -51,3 +51,11 @@ The 2080 Super was excluded through CUDA_VISIBLE_DEVICES=0, and both Intel B70s 
 - unlocked-telemetry-summary.json and stock-telemetry-summary.json: sampled GPU temperatures and clock-limit flags.
 
 No model weights, firmware binaries, client data, or machine access credentials are included.
+
+## Post-test restoration
+
+Following the 15-model stock test, the experimental packages gpu-unlock-dkms 1.1.0 and gpu-unlock-firmware 1.1.0 were purged. The command removed only those two packages. The module is absent from lsmod, DKMS status and the rebuilt initramfs. The preserved original 7.0.0-31 stock recovery initramfs still matched SHA-256 eaf34084c9f38943fe74f923e4a1652a532573814ec2c811b0b79a54874802cb, and GRUB syntax passed validation.
+
+Production NVIDIA driver 595.99.02 remains installed, RTX 3090 power limit 420 W and RTX 2080 Super 250 W. Both Intel B70 GPUs remain bound to xe. Maya and Ornith were active, their model endpoints returned HTTP 200, and both passed an independent READY completion after restoration.
+
+No extra reboot was required after package removal because the host had already completed a verified full chassis-off stock boot with no unlock selector and no loaded unlock module.

@@ -26,6 +26,9 @@ This is a controlled single-card inference result, not a claim about FP16 traini
 
 Model weights and proprietary GPU firmware are deliberately excluded.
 
+**Post-test state verified:** After a full chassis-off boot into stock Linux 7.0.0-31, the two experimental GPU Unlock 1.1.0 packages were purged. The unlock module is absent from the loaded modules, DKMS and the rebuilt stock initramfs. NVIDIA driver 595.99.02 and the original 420 W/250 W board limits remain in service. Both Maya and Ornith returned successful READY completions after the cleanup; the Intel B70 driver bindings are unchanged. See the [restoration verification](results/analysis.md#post-test-restoration).
+
+
 ## Research question
 
 Does unlocking restricted FP16/BF16 compute throughput on an RTX 3090 materially improve actual LLM inference? Does the answer vary with model size, architecture, mixture-of-experts routing, quantization, prompt prefill and token generation?
