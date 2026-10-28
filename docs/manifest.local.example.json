@@ -1,0 +1,11 @@
+{
+  "models": [
+    {
+      "id": "phi3-mini-q4",
+      "path": "/path/to/Phi-3-mini-4k-instruct-Q4_K_M.gguf",
+      "sha256": "REPLACE_WITH_VERIFIED_SHA256",
+      "source": "bartowski/Phi-3-mini-4k-instruct-GGUF",
+      "quantization": "Q4_K_M"
+    }
+  ]
+}

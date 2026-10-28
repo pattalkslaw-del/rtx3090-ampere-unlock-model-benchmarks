@@ -1,0 +1,13 @@
+__pycache__/
+*.gguf
+*.safetensors
+*.part
+*.log
+*.sqlite
+.env
+.env.*
+manifest.local.json
+results/private/
+data/private/
+work/
+.DS_Store
