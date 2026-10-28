@@ -1,0 +1,22 @@
+{
+  "stock-420.jsonl": {
+    "sha256": "e0a53ad354c6b4e35f574319b635efc8e325532754cd4a9e2bf8656862f7e33e",
+    "bytes": 27664,
+    "public": true
+  },
+  "stock-420-environment.json": {
+    "sha256": "a2c018b7e168fb5f1e34ef14ab4aa846455465951239c39c740efeb599a218dc",
+    "bytes": 630,
+    "public": true
+  },
+  "stock-420-original.jsonl": {
+    "sha256": "e70a0bfabdd647fe9d92e67d4910291e2b418ea4ec9f803dcc7c4a7a5d5daa7a",
+    "bytes": 27452,
+    "public": false
+  },
+  "stock-420-telemetry.jsonl": {
+    "sha256": "05d05c41b86b8a452ec499beaf70c858ab3a74028d733bd20895401f4ea51ce4",
+    "bytes": 1010045,
+    "public": false
+  }
+}

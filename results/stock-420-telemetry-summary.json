@@ -1,0 +1,22 @@
+{
+  "GPU-af981a04-0521-367f-f8b3-2f7a0dbeecbe": {
+    "gpu": "RTX 3090",
+    "samples": 422,
+    "core_temperature_peak_C": 72.0,
+    "board_power_peak_W": 419.42,
+    "vram_used_peak_MiB": 21526.0,
+    "software_thermal_flags": 4,
+    "hardware_thermal_flags": 0,
+    "hardware_power_brake_flags": 0
+  },
+  "GPU-0efcf78e-35c0-96bb-6f92-0ddff29bbac7": {
+    "gpu": "other NVIDIA GPU",
+    "samples": 421,
+    "core_temperature_peak_C": 46.0,
+    "board_power_peak_W": 23.02,
+    "vram_used_peak_MiB": 1.0,
+    "software_thermal_flags": 0,
+    "hardware_thermal_flags": 0,
+    "hardware_power_brake_flags": 0
+  }
+}

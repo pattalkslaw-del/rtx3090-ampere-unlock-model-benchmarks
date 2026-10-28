@@ -29,6 +29,20 @@ Model weights and proprietary GPU firmware are deliberately excluded.
 **Post-test state verified:** After a full chassis-off boot into stock Linux 7.0.0-31, the two experimental GPU Unlock 1.1.0 packages were purged. The unlock module is absent from the loaded modules, DKMS and the rebuilt stock initramfs. NVIDIA driver 595.99.02 and the original 420 W/250 W board limits remain in service. Both Maya and Ornith returned successful READY completions after the cleanup; the Intel B70 driver bindings are unchanged. See the [restoration verification](results/analysis.md#post-test-restoration).
 
 
+## 420 W extension: stock baseline completed
+
+A second, independent run at the RTX 3090's factory 420 W power limit completed **15 of 15 stock models** on October 28, 2026. The card reached 419.42 W and 72 C. The safety monitor recorded four brief software thermal flags, no hardware thermal events and no power-brake flags. No load failures occurred.
+
+Compared with the earlier stock 300 W run, raising the power limit increased model-weighted geometric mean throughput by **7.89%** (pp512), **10.78%** (pp2048) and **5.47%** (tg128).
+
+The matched unlocked 420 W phase is **pending**. These are stock-only power comparisons, not GPU Unlock benefits at 420 W. The earlier 300 W findings above remain unchanged.
+
+- [Stock 420 W model throughput](results/stock-420-summary.md)
+- [Stock 420 W raw timing samples and checksums](results/stock-420.jsonl)
+- [GPU temperatures, actual power draw, and clock flags](results/stock-420-telemetry-summary.json)
+- [420 W stock environment](results/stock-420-environment.json) and [file digests](results/stock-420-evidence-hashes.json)
+- [Four-condition comparison script](scripts/compare_power_matrix.py), ready for the remaining unlocked 420 W dataset
+
 ## Research question
 
 Does unlocking restricted FP16/BF16 compute throughput on an RTX 3090 materially improve actual LLM inference? Does the answer vary with model size, architecture, mixture-of-experts routing, quantization, prompt prefill and token generation?
