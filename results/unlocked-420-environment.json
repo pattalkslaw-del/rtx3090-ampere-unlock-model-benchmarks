@@ -1,0 +1,25 @@
+{
+  "phase": "unlocked",
+  "gpu_inventory": "0, NVIDIA GeForce RTX 3090, 00000000:01:00.0, 420.00\n1, NVIDIA GeForce RTX 2080 SUPER, 00000000:45:00.0, 250.00\n",
+  "binary_sha256": "4e663f6611fa9192a0898c47f1340bbd41f590437680082d1da33f78be84e118",
+  "power_w": 420,
+  "binary_name": "llama-bench",
+  "repeats": 3,
+  "source_git_commit": "6a1a922",
+  "cuda_toolkit": "12.8",
+  "parameters": {
+    "n_prompt": [
+      512,
+      2048
+    ],
+    "n_gen": 128,
+    "n_gpu_layers": 99,
+    "threads": 16,
+    "batch": 512,
+    "ubatch": 512,
+    "device": "CUDA0",
+    "flash_attn": "on",
+    "KV": "f16",
+    "split_mode": "none"
+  }
+}

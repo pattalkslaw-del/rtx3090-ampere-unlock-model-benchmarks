@@ -29,19 +29,28 @@ Model weights and proprietary GPU firmware are deliberately excluded.
 **Post-test state verified:** After a full chassis-off boot into stock Linux 7.0.0-31, the two experimental GPU Unlock 1.1.0 packages were purged. The unlock module is absent from the loaded modules, DKMS and the rebuilt stock initramfs. NVIDIA driver 595.99.02 and the original 420 W/250 W board limits remain in service. Both Maya and Ornith returned successful READY completions after the cleanup; the Intel B70 driver bindings are unchanged. See the [restoration verification](results/analysis.md#post-test-restoration).
 
 
-## 420 W extension: stock baseline completed
+## 420 W comparison: all 15 models complete
 
-A second, independent run at the RTX 3090's factory 420 W power limit completed **15 of 15 stock models** on October 28, 2026. The card reached 419.42 W and 72 C. The safety monitor recorded four brief software thermal flags, no hardware thermal events and no power-brake flags. No load failures occurred.
+The second study tested the RTX 3090 at its original **420 W power limit** in both stock and unlocked configurations. Both phases passed 15 of 15 GGUF models and 45 benchmark cases, using the same model files, pinned CUDA binary and execution settings as the earlier 300 W study.
 
-Compared with the earlier stock 300 W run, raising the power limit increased model-weighted geometric mean throughput by **7.89%** (pp512), **10.78%** (pp2048) and **5.47%** (tg128).
+| Workload | Unlock gain at 300 W | Unlock gain at 420 W | Stock: 420 vs 300 W |
+|---|---:|---:|---:|
+| 512-token prefill | -1.22% | -0.37% | +7.89% |
+| 2048-token prefill | +0.21% | +0.67% | +10.78% |
+| 128-token generation | -0.28% | -0.04% | +5.47% |
 
-The matched unlocked 420 W phase is **pending**. These are stock-only power comparisons, not GPU Unlock benefits at 420 W. The earlier 300 W findings above remain unchanged.
+The data support two separate findings. More power improves quantized CUDA inference. The GPU Unlock modification itself produces little throughput benefit in this model suite at either power limit.
 
-- [Stock 420 W model throughput](results/stock-420-summary.md)
-- [Stock 420 W raw timing samples and checksums](results/stock-420.jsonl)
-- [GPU temperatures, actual power draw, and clock flags](results/stock-420-telemetry-summary.json)
-- [420 W stock environment](results/stock-420-environment.json) and [file digests](results/stock-420-evidence-hashes.json)
-- [Four-condition comparison script](scripts/compare_power_matrix.py), ready for the remaining unlocked 420 W dataset
+At 420 W, stock testing reached 72 C / 419.42 W, and unlocked testing reached 74 C / 420.32 W. Both had four brief software thermal-slowdown samples, no hardware thermal-slowdown flags, and no hardware power-brake flags. Fourteen of the 45 paired cases had over 5% within-phase coefficient of variation in at least one of the four conditions. Small (<2%) gains should be treated as inconclusive without longer, repeated experiments.
+
+- [Full four-condition aggregate and per-model table](results/power-matrix.md)
+- [Machine-readable 45-case comparison CSV](results/power-matrix.csv) and [aggregate JSON](results/power-matrix-aggregates.json)
+- [Unlocked 420 W raw timing samples](results/unlocked-420.jsonl) and [stock 420 W raw samples](results/stock-420.jsonl)
+- [Unlocked 420 W model throughput](results/unlocked-420-summary.md) and [stock 420 W throughput](results/stock-420-summary.md)
+- [Unlocked thermal summary](results/unlocked-420-telemetry-summary.json) and [stock thermal summary](results/stock-420-telemetry-summary.json)
+- [Unlocked environment](results/unlocked-420-environment.json), [stock environment](results/stock-420-environment.json), and [evidence digests](results/unlocked-420-evidence-hashes.json)
+
+The 420 W unlocked firmware test has finished. **Final chassis-off stock restoration is still pending**; do not interpret the completed benchmarks as confirmation of hardware rollback.
 
 ## Research question
 

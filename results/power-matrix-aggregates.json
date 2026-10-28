@@ -1,0 +1,178 @@
+{
+  "definitions": {
+    "unlock_at_300": "unlocked / stock at 300 W",
+    "unlock_at_420": "unlocked / stock at 420 W",
+    "stock_420_vs_300": "stock 420 W / stock 300 W",
+    "unlock_420_vs_300": "unlocked 420 W / unlocked 300 W"
+  },
+  "models": 15,
+  "cases": 45,
+  "repeats_per_case_per_phase": 3,
+  "all_model_and_binary_hashes_match": true,
+  "high_variability_gt_5pct": [
+    {
+      "model": "gemma3-4b-q4",
+      "case": "pp512",
+      "max_cv_pct": 35.02
+    },
+    {
+      "model": "llama3.2-1b-q8",
+      "case": "pp512",
+      "max_cv_pct": 18.01
+    },
+    {
+      "model": "llama3.2-3b-q4",
+      "case": "pp512",
+      "max_cv_pct": 33.56
+    },
+    {
+      "model": "mistral-7b-q4",
+      "case": "pp512",
+      "max_cv_pct": 6.46
+    },
+    {
+      "model": "ornith1-35b-q4",
+      "case": "pp512",
+      "max_cv_pct": 14.01
+    },
+    {
+      "model": "ornith1-9b-q8",
+      "case": "pp512",
+      "max_cv_pct": 21.61
+    },
+    {
+      "model": "ornith1.5-35b-q4",
+      "case": "pp512",
+      "max_cv_pct": 17.24
+    },
+    {
+      "model": "phi3-mini-q4",
+      "case": "pp512",
+      "max_cv_pct": 7.84
+    },
+    {
+      "model": "qwen3-14b-q4",
+      "case": "pp512",
+      "max_cv_pct": 13.04
+    },
+    {
+      "model": "qwen3-4b-q4",
+      "case": "pp512",
+      "max_cv_pct": 11.4
+    },
+    {
+      "model": "qwen3-8b-q4",
+      "case": "pp512",
+      "max_cv_pct": 19.04
+    },
+    {
+      "model": "qwen3.6-35b-a3b-q4",
+      "case": "pp512",
+      "max_cv_pct": 10.32
+    },
+    {
+      "model": "qwen3.8-27b-iq3",
+      "case": "pp512",
+      "max_cv_pct": 7.36
+    },
+    {
+      "model": "qwen3.8-27b-q4",
+      "case": "pp512",
+      "max_cv_pct": 7.05
+    }
+  ],
+  "aggregates": {
+    "unlock_at_300": {
+      "pp512": {
+        "geomean_gain_pct": -1.219879857346018,
+        "median_gain_pct": -0.5184410719502375,
+        "min_gain_pct": -7.832884504111048,
+        "max_gain_pct": 2.3694987002427004,
+        "model_count": 15
+      },
+      "pp2048": {
+        "geomean_gain_pct": 0.21475008586475663,
+        "median_gain_pct": 0.2955848173994191,
+        "min_gain_pct": -0.7339361150430324,
+        "max_gain_pct": 1.1316106730198339,
+        "model_count": 15
+      },
+      "tg128": {
+        "geomean_gain_pct": -0.2773214733571172,
+        "median_gain_pct": -0.12219768226352512,
+        "min_gain_pct": -0.9393245800396799,
+        "max_gain_pct": 0.1265125216952212,
+        "model_count": 15
+      }
+    },
+    "unlock_at_420": {
+      "pp512": {
+        "geomean_gain_pct": -0.3705815592280337,
+        "median_gain_pct": 0.2904211851132876,
+        "min_gain_pct": -10.951966218640985,
+        "max_gain_pct": 8.006473924056202,
+        "model_count": 15
+      },
+      "pp2048": {
+        "geomean_gain_pct": 0.6728348335392598,
+        "median_gain_pct": 0.6718684552367238,
+        "min_gain_pct": -0.10221429854612163,
+        "max_gain_pct": 1.3915687314466352,
+        "model_count": 15
+      },
+      "tg128": {
+        "geomean_gain_pct": -0.039416424460092525,
+        "median_gain_pct": -0.00679615702179337,
+        "min_gain_pct": -0.4944337282321243,
+        "max_gain_pct": 0.39657324792226056,
+        "model_count": 15
+      }
+    },
+    "stock_420_vs_300": {
+      "pp512": {
+        "geomean_gain_pct": 7.8862747415409995,
+        "median_gain_pct": 9.532218368454103,
+        "min_gain_pct": -0.9522928647640594,
+        "max_gain_pct": 14.751843593434778,
+        "model_count": 15
+      },
+      "pp2048": {
+        "geomean_gain_pct": 10.778853863844251,
+        "median_gain_pct": 11.160128662037394,
+        "min_gain_pct": 8.625238195348729,
+        "max_gain_pct": 12.982654140900184,
+        "model_count": 15
+      },
+      "tg128": {
+        "geomean_gain_pct": 5.470684996370756,
+        "median_gain_pct": 5.598408584135095,
+        "min_gain_pct": 2.2652783416729383,
+        "max_gain_pct": 11.091264335936103,
+        "model_count": 15
+      }
+    },
+    "unlock_420_vs_300": {
+      "pp512": {
+        "geomean_gain_pct": 8.813866542360383,
+        "median_gain_pct": 10.08321269921173,
+        "min_gain_pct": -4.760052765546874,
+        "max_gain_pct": 16.947316186975957,
+        "model_count": 15
+      },
+      "pp2048": {
+        "geomean_gain_pct": 11.285227459312086,
+        "median_gain_pct": 11.60830059193605,
+        "min_gain_pct": 9.056507014127613,
+        "max_gain_pct": 13.259948368247931,
+        "model_count": 15
+      },
+      "tg128": {
+        "geomean_gain_pct": 5.722302871481877,
+        "median_gain_pct": 6.049560362235917,
+        "min_gain_pct": 2.177810204577124,
+        "max_gain_pct": 11.446067584228793,
+        "model_count": 15
+      }
+    }
+  }
+}

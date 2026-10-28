@@ -30,3 +30,12 @@ Do not conflate FP16 GEMM throughput with model inference tokens/s. Do not compa
 Both 15-model phases passed all 45 synthetic throughput test cases. Models were tested in the same order; the unlocked phase preceded a genuine chassis-off power cycle and stock boot, after which the same dedicated CUDA benchmark was run. The stock boot had no GPU Unlock kernel selector or loaded module. All published model and binary hashes match between phases.
 
 The dataset is a paired single-run comparison, not an alternating ABBA study. Some short-context cases had coefficients of variation above 5% and should not be treated as reproducible gains or losses without additional repetitions. Aggregated results are model-weighted geometric means of unlocked/stock throughput ratios. See results/analysis.md for all values and caveats.
+
+
+## 420 W follow-up, October 28, 2026
+
+After completing the 300 W comparison, the same physical RTX 3090 was tested with the manufacturer's 420 W power cap. The stock phase ran first and the GPU Unlock phase ran after a one-time experimental boot. The Linux kernel, NVIDIA driver, same pinned CUDA llama-bench binary, 15 GGUF SHA-256 files, model order and per-case settings were preserved.
+
+Both phases completed all 15 models and all 45 benchmark cases. The earlier 300 W runs and both 420 W runs form the four-condition table in results/power-matrix.md. The paired comparison rejects mismatches in SHA-256 hashes, CUDA backend, offloaded layer count, parameters, execution settings or per-case repetition count.
+
+The phase order is not randomized. With only three samples per case and some coefficients of variation above 5%, small gains should be treated as measurement noise until repeated runs confirm them. Report the 420 W board-cap setting separately from sampled power draw and recorded clock limit flags.
