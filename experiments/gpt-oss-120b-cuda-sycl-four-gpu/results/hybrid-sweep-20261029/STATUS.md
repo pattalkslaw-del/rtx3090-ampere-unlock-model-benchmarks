@@ -1,0 +1,18 @@
+TEST START 2026-10-30T02:56:45+00:00
+
+BEGIN 8k context=8192 2026-10-30T02:56:47+00:00
+END 8k exit=0 2026-10-30T02:57:20+00:00
+[ Prompt: 525.0 t/s | Generation: 85.9 t/s ]
+
+BEGIN 32k context=32768 2026-10-30T02:57:20+00:00
+END 32k exit=0 2026-10-30T02:58:12+00:00
+[ Prompt: 586.8 t/s | Generation: 71.3 t/s ]
+
+BEGIN 64k context=65536 2026-10-30T02:58:12+00:00
+END 64k exit=0 2026-10-30T02:59:51+00:00
+[ Prompt: 519.6 t/s | Generation: 52.5 t/s ]
+
+BEGIN 128k context=131072 2026-10-30T02:59:51+00:00
+END 128k exit=0 2026-10-30T03:01:31+00:00
+[ Prompt: 518.9 t/s | Generation: 52.5 t/s ]
+SWEEP ENDED 2026-10-30T03:01:31+00:00
